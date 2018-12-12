@@ -1,0 +1,6 @@
+##using sed function, need to use the y/// subcommand to make work
+cat DNA.txt | sed 'y/ATGC/TACG/' | tr -d '\n' | rev
+
+###can also be done just using tr function
+cat DNA.txt | tr 'ATGC' 'TACG' | tr -d '\n' | rev
+
